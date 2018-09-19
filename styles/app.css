@@ -1,0 +1,65 @@
+.body {
+    background-color:#FF9D1D;
+}
+
+.linkFont {
+    color: #232323; 
+    font-size: 120%; 
+    font-family: Verdana, Geneva, sans-serif
+}
+
+.txtFont {
+    color: #232323; 
+	font-size: 130%; 
+	font-family: Verdana, Geneva, sans-serif
+}
+
+.nav {
+    background-color: #ffffff !important;
+}
+
+.center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.title {
+    font-size: 220%;
+    color: #232323; 
+    font-family: Impact, Charcoal, sans-serif
+}
+
+.levels {
+    background-color: red;
+    margin-left:  50px;
+    margin-right: 50px;
+}
+
+.level-0 {
+    background: url('../images/ic_level_0.png') no-repeat;
+    width:  32px;
+    height: 32px;
+    margin: 12px;
+}
+
+.level-1 {
+    background: url('../images/ic_level_1.png') no-repeat;
+    width:  32px;
+    height: 32px;
+    margin: 12px;
+}
+
+.level-2 {
+    background: url('../images/ic_level_2.png') no-repeat;
+    width:  32px;
+    height: 32px;
+    margin: 12px;
+}
+
+.level-3 {
+    background: url('../images/ic_level_3.png') no-repeat;
+    width:  32px;
+    height: 32px;
+    margin: 12px;
+}

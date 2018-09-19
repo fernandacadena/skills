@@ -1,0 +1,67 @@
+{
+  "skills" : [ null, {
+    "id" : 1,
+    "image" : "ic_android.png",
+    "name" : "Android"
+  }, {
+    "id" : 2,
+    "image" : "ic_ios.png",
+    "name" : "iOS"
+  }, {
+    "id" : 3,
+    "image" : "ic_ionic.png",
+    "name" : "Ionic"
+  }, {
+    "id" : 4,
+    "image" : "ic_react.png",
+    "name" : "React Native"
+  } ],
+  "userskills" : {
+    "Se0M17IABXMUfrLC7idPX32jgKA3" : {
+      "skills" : [ null, {
+        "id" : 1,
+        "myLevel" : "2",
+        "name" : "Android",
+        "numberProjects" : "3",
+        "updateDate" : "2018/8/26"
+      }, null, {
+        "id" : 3,
+        "myLevel" : "2",
+        "name" : "Ionic",
+        "numberProjects" : "4",
+        "updateDate" : "2018/8/26"
+      }, {
+        "id" : 4,
+        "myLevel" : "0",
+        "name" : "React Native",
+        "numberProjects" : "2",
+        "updateDate" : "2018/8/26"
+      } ],
+      "uid" : "Se0M17IABXMUfrLC7idPX32jgKA3",
+      "user" : "primo@accenture.com"
+    },
+    "iw4BiEYKrjajuPFG3sSEJGWa5zk1" : {
+      "skills" : [ null, null, {
+        "id" : 2,
+        "myLevel" : "0",
+        "name" : "iOS",
+        "numberProjects" : "20",
+        "updateDate" : "2018/8/26"
+      }, {
+        "id" : 3,
+        "myLevel" : "1",
+        "name" : "Ionic",
+        "numberProjects" : "153",
+        "updateDate" : ""
+      }, {
+        "id" : 4,
+        "myLevel" : "1",
+        "name" : "React Native",
+        "numberProjects" : "550",
+        "updateDate" : "2018/8/26"
+      } ],
+      "uid" : "iw4BiEYKrjajuPFG3sSEJGWa5zk1",
+      "user" : "primozalho.d.filho@accenture.com"
+    }
+  }
+}

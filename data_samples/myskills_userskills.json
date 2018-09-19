@@ -1,0 +1,54 @@
+{
+  "skills" : [ null, {
+    "id" : 1,
+    "image" : "ic_android.png",
+    "name" : "Android"
+  }, {
+    "id" : 2,
+    "image" : "ic_ios.png",
+    "name" : "iOS"
+  }, {
+    "id" : 3,
+    "image" : "ic_ionic.png",
+    "name" : "Ionic"
+  }, {
+    "id" : 4,
+    "image" : "ic_react.png",
+    "name" : "React Native"
+  } ],
+  "userskills" : {
+    "iw4BiEYKrjajuPFG3sSEJGWa5zk1" : {
+      "skills" : {
+        "3" : {
+          "id" : 3,
+          "myLevel" : 2,
+          "name" : "Ionic",
+          "numberProjects" : 0,
+          "updateDate" : 0
+        }
+      },
+      "uid" : "iw4BiEYKrjajuPFG3sSEJGWa5zk1",
+      "user" : "primozalho.d.filho@accenture.com"
+    },
+    "xb0v50nixtWHU7w9Y54Mymz3Xf02" : {
+      "skills" : {
+        "1" : {
+          "id" : 1,
+          "myLevel" : 2,
+          "name" : "Android",
+          "numberProjects" : 0,
+          "updateDate" : 0
+        },
+        "4" : {
+          "id" : 4,
+          "myLevel" : 2,
+          "name" : "React Native",
+          "numberProjects" : 0,
+          "updateDate" : 0
+        }
+      },
+      "uid" : "xb0v50nixtWHU7w9Y54Mymz3Xf02",
+      "user" : "maria@accenture.com"
+    }
+  }
+}

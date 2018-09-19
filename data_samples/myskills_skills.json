@@ -1,0 +1,21 @@
+{
+  "skills" : [  
+                {
+                  "id" : 1,
+                  "image" : "ic_android.png",
+                  "name" : "Android"
+                }, {
+                  "id" : 2,
+                  "image" : "ic_ios.png",
+                  "name" : "iOS"
+                }, {
+                  "id" : 3,
+                  "image" : "ic_ionic.png",
+                  "name" : "Ionic"
+                }, {
+                  "id" : 4,
+                  "image" : "ic_react.png",
+                  "name" : "React Native"
+                }
+              ]
+}
