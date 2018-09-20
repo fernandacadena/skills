@@ -285,14 +285,14 @@ var app = {
     var strListSkills = '';
     app.arrMySkills.forEach(function(vSkill) {
       strListSkills += '<div class="col s6 m3" onclick="app.fnShowUserSkill('+ vSkill.id +');">';
-        strListSkills += '<div class="card" style="background-color:' + vSkill.color + '">';
+        strListSkills += '<div class="card" style="border-radius: 3%; background-color:' + vSkill.color + '">';
           strListSkills += '<div class="card-image">';
             strListSkills += '<img src="images/'+ vSkill.image +'" alt="" style="width: 50%; height: 50%; padding-top: 15%; display: inline;">';
             //strListSkills += '<span class="card-title black-text">'+ data.val().name +'</span>';
           strListSkills += '</div>';
           strListSkills += '<div class="card-content">';
-            strListSkills += '<p>Nível:<br> '+ SKILL_LEVEL[vSkill.myLevel].Name +'</p>';
-            strListSkills += '<p>Projetos: '+ vSkill.numberProjects +'</p>';
+            strListSkills += '<p style="font-family:Montserrat, sans-serif"><b>Nível:</b><br> '+ SKILL_LEVEL[vSkill.myLevel].Name +'</p>';
+            strListSkills += '<p style="font-family:Montserrat, sans-serif"><b>Projetos:</b> '+ vSkill.numberProjects +'</p>';
           strListSkills += '</div>';
         strListSkills += '</div>';
       strListSkills += '</div>';
@@ -328,8 +328,8 @@ var app = {
 
   fnSalvarSkills: function() {
     var objSkill = app.arrMySkills.find(app.checkSkillID);
-    if (Number(txtSkillNumberProjects.value) < 0 || Number(txtSkillNumberProjects.value) > 10000) {
-      alert ("Informe a quantidade de projetos entre 0 e 9999.");
+    if (Number(txtSkillNumberProjects.value) < 0 || Number(txtSkillNumberProjects.value) > 100) {
+      alert ("Informe a quantidade de projetos entre 0 e 100.");
       return ;
     }
 

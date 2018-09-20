@@ -20,6 +20,8 @@
   <link type="text/css" rel="stylesheet" href="styles/materialize-1.0.0.min.css" media="screen,projection" />
   <!-- Override Css-->
   <link type="text/css" rel="stylesheet" href="styles/app.css" />
+  <!-- Font Family -->
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
   <!-- Firebase    -->
   <script type="text/javascript" src="scripts/firebase-app-5.4.0.min.js"></script>
   <script type="text/javascript" src="scripts/firebase-auth-5.4.0.min.js"></script>
@@ -32,27 +34,27 @@
     <div class="col s12 center">
       <div class="center">
         <img src="images/logo_144x144.png" style="float: left;" />
-        <h3 class="title" style="padding-left: 5%;">SKILLS</h3>
+        <h3 class="titleFont" style="padding-left: 5%;">SKILLS</h3>
       </div>
     </div>
     <br/>
     <!-- Description heading-->
-    <div class="row" style="padding-left: 8%">
-        <h6 class="text col s12" style="width: 90%;">Skills é um App que permitirá melhor eficiência na alocação em projetos do time de DDM por meio de um cadastro de níveis de conhecimento nos mais comuns frameworks.</h3>
+    <div class="row" style="padding: 5%">
+        <h6 class="text col s12 descriptionFont">Skills é um app que permitirá melhor eficiência na alocação em projetos do time de DDM por meio de um cadastro de níveis de conhecimento nos mais comuns frameworks.</h3>
     </div>
     <div class="row" style="padding-left: 8%">
       <!-- EID Input-->
       <div class="input-field col s12" style="width: 90%;">
         <input type="text" id="txtEnterpriseID" class="validate" required>
         <label for="txtEnterpriseID" class="txtFont" style="font-size:120%">Enterprise ID:</label>
-        <span class="helper-text" style="font-size: 110%; font-family: Verdana, Geneva, sans-serif" data-error="Informe o eid"
+        <span class="helper-text" style="font-size: 110%; font-family: 'Montserrat', sans-serif" data-error="Informe o eid"
           data-success=""></span>
       </div>
       <!-- Password Input -->
       <div class="input-field col s12" style="width: 90%;">
         <input type="Password" id="txtPassword" class="validate" required>
         <label for="txtPassword" class="txtFont" style="font-size:120%">Senha:</label>
-        <span class="helper-text" style="font-size: 110%; font-family: Verdana, Geneva, sans-serif" data-error="Informe a senha"
+        <span class="helper-text" style="font-size: 110%; font-family: 'Montserrat', sans-serif" data-error="Informe a senha"
           data-success=""></span>
           <!-- Forgot Password Link-->
         <a href="#" id="lnkForgotPassword" class="linkFont" style="float: right;">Esqueceu sua senha?</a>
@@ -61,7 +63,7 @@
       <div class="input-field col s12" id="pnlPasswordConfirm" style="width: 90%">
         <input type="Password" id="txtPasswordConfirm" class="validate" required>
         <label for="txtPasswordConfirm" class="txtFont" style="font-size:120%">Confirme a senha:</label>
-        <span class="helper-text" style="font-size: 110%; font-family: Verdana, Geneva, sans-serif" data-error="Informe a confirmação da senha"
+        <span class="helper-text" style="font-size: 110%; font-family: 'Montserrat', sans-serif" data-error="Informe a confirmação da senha"
           data-success=""></span>
       </div>
     </div>
@@ -118,14 +120,15 @@
   <div id="mdlUserSkill" class="modal modal-fixed-footer">
     <div class="modal-content">
       <input type="hidden" id="lblSkillID" />
-      <input type="hidden" id="lblSkillImage" />
+
+      <input type="hidden" id="lblSkillImage"/>
       <input type="hidden" id="txtSkillMyLevel" />
 
       <div class="row">
         <div class="col s10 offset-s1 center-align">
-          <h4 id="lblSkillName" class="modalFont">Skill</h4>
-          <h5 id="lblSkillLevelName">Level: </h5>
-          <h6 id="lblSkillLevelDescription">Descrição:</h6>
+          <h4 id="lblSkillName" class="modalTitleFont">Skill</h4>
+          <h5 id="lblSkillLevelName" class="modalSkillFont" style="padding-top:10%">Level: </h5>
+          <h6 id="lblSkillLevelDescription" class="modalDescriptionFont">Descrição:</h6>
         </div>
       </div>
 
@@ -150,16 +153,16 @@
           </div>
         </div>
 
-        <div class="input-field col s10 offset-s1 center-align">
-          <input type="number" id="txtSkillNumberProjects" class="validate right-align" required min="0" max="9999" value="0">
-          <label for="txtSkillNumberProjects">Qtde de projetos realizados:</label>
-          <span class="helper-text" data-error="Informe um número entre 0 e 9999." data-success=""></span>
+        <div class="input-field col s10 offset-s1 center-align" style="padding-top:-10;margin-top: 0px;margin-bottom: 0px;">
+            <h6 for="txtSkillNumberProjects" class="modalDescriptionFont" style="text-align: center">Quantidade de projetos realizados:</h6>
+          <input type="number" id="txtSkillNumberProjects" class="validate center-align" required min="0" max="100" value="0" style="height: 30px;">
+          <span class="helper-text" data-error="Informar a quantidade" data-success="" style="font-size: 95%; font-family: 'Montserrat', sans-serif"></span>
         </div>
       </div>
     </div>
     <div class="modal-footer">
       <a href="#" id="lnkSalvarSkills" class="btn-flat waves-effect waves-green">Salvar</a>
-      <a href="#" class="modal-close waves-effect waves-green btn-flat">FECHAR</a>
+      <a href="#" class="modal-close waves-effect waves-green btn-flat">Fechar</a>
     </div>
   </div>
 
