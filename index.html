@@ -29,6 +29,7 @@
 <body class="body">
 
   <section id="frmLogin">
+    <!-- Logo -->
     <div class="col s12 center">
       <div class="center">
         <img src="images/logo_144x144.png" style="float: left;" />
@@ -37,19 +38,23 @@
     </div>
     <br/>
     <div class="row" style="padding-left: 8%">
+      <!-- EID Input-->
       <div class="input-field col s12" style="width: 90%;">
         <input type="text" id="txtEnterpriseID" class="validate" required>
         <label for="txtEnterpriseID" class="txtFont" style="font-size:120%">Enterprise ID:</label>
         <span class="helper-text" style="font-size: 110%; font-family: Verdana, Geneva, sans-serif" data-error="Informe o eid"
           data-success=""></span>
       </div>
+      <!-- Password Input -->
       <div class="input-field col s12" style="width: 90%;">
         <input type="Password" id="txtPassword" class="validate" required>
         <label for="txtPassword" class="txtFont" style="font-size:120%">Senha:</label>
         <span class="helper-text" style="font-size: 110%; font-family: Verdana, Geneva, sans-serif" data-error="Informe a senha"
           data-success=""></span>
+          <!-- Forgot Password Link-->
         <a href="#" id="lnkForgotPassword" class="linkFont" style="float: right;">Esqueceu sua senha?</a>
       </div>
+      <!-- Confirm Password Input -->
       <div class="input-field col s12" id="pnlPasswordConfirm" style="width: 90%">
         <input type="Password" id="txtPasswordConfirm" class="validate" required>
         <label for="txtPasswordConfirm" class="txtFont" style="font-size:120%">Confirme a senha:</label>
@@ -58,14 +63,17 @@
       </div>
     </div>
     <div class="row">
+      <!-- Login Btn -->
       <div class="col s12 center">
         <button type="button" id="btnLogin" class="btn waves-effect waves-light center" style="background-color: #232323; width: 80%; border-radius: 50px;">Acessar</button>
       </div>
+      <!-- Register Btn -->
       <div class="col s12 center">
         <button type="button" id="btnRegisterNewUser" class="btn waves-effect waves-light" style="background-color: #232323; width: 80%; border-radius: 50px">Cadastrar</button>
       </div>
       <br>
       <br>
+      <!-- Register Link -->
       <div class="col s12 center">
         <a href="#" id="chkRegisterNewUser" class="linkFont">Não possui cadastro? Clique aqui.</a>
       </div>
