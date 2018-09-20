@@ -256,74 +256,43 @@ var app = {
     for (var i = 0; i < SKILLS.length; i++) {
       objDatabase = firebase.database();
       objDatabase.ref("/userskills/"+ firebase.auth().currentUser.uid + '/skills/' + SKILLS[i].id).once('value').then(
-        function(vUserSkill) {
-          if (vUserSkill.val() != null) {
-            vID = vUserSkill.val().id - 1;
+               function(vUserSkill) {
+          vID = vUserSkill.key - 1;
 
-            objSkill.myLevel = vUserSkill.val().myLevel;
-            objSkill.numberProjects = vUserSkill.val().numberProjects;
-          }
-          else
-            vID = 0;
-          
+          var objUserSkill = vUserSkill.val(); 
           var objSkill = {  
             id: SKILLS[vID].id,
             name: SKILLS[vID].name,
             image: SKILLS[vID].image,
+            color: SKILLS[vID].color,
             myLevel: 0,
             numberProjects: 0,
             updateDate: ''
           };
-
+          
+          if (objUserSkill != null) {
+            objSkill.myLevel = objUserSkill.myLevel;
+            objSkill.numberProjects = objUserSkill.numberProjects;
+          } 
+          
           app.arrMySkills.push(objSkill);
           app.onRenderListSkills();
       });
     }
   },
 
-  fnLoadSkillsOLD: function() {
-    objDatabase = firebase.database();
-    objDatabase.ref("/skills").once('value').then(function(vSkills) 
-    {
-      vSkills.forEach(function(vSkill) {
-        var objSkill = {  
-          id: vSkill.val().id,
-          name: vSkill.val().name,
-          image: vSkill.val().image,
-          myLevel: 0,
-          numberProjects: 0,
-          updateDate: ''
-        };
-
-        objDatabase.ref("/userskills/"+ firebase.auth().currentUser.uid + '/skills/' + vSkill.val().id).once('value').then(
-        function(vUserSkill) {
-          if (vUserSkill.val() != null) {
-            objSkill.myLevel = vUserSkill.val().myLevel;
-            objSkill.numberProjects = vUserSkill.val().numberProjects;
-          }
-
-          //TODO: esta renderizando 4x
-          app.arrMySkills.push(objSkill);
-          app.onRenderListSkills();
-        });
-      });
-    });
-  },
-
   onRenderListSkills: function() {
     var strListSkills = '';
     app.arrMySkills.forEach(function(vSkill) {
-      strListSkills += '<div class="col s6 m3">';
-        strListSkills += '<div class="card">';
-          strListSkills += '<div class="card-image grey lighten-3">';
-            strListSkills += '<img src="images/'+ vSkill.image +'" alt="">';
+      strListSkills += '<div class="col s6 m3" onclick="app.fnShowUserSkill('+ vSkill.id +');">';
+        strListSkills += '<div class="card" style="background-color:' + vSkill.color + '">';
+          strListSkills += '<div class="card-image">';
+            strListSkills += '<img src="images/'+ vSkill.image +'" alt="" style="width: 50%; height: 50%; padding-top: 15%; display: inline;">';
             //strListSkills += '<span class="card-title black-text">'+ data.val().name +'</span>';
-            strListSkills += '<a href="#" class="btn-floating btn-large halfway-fab waves-effect waves-light" onclick="app.fnShowUserSkill('+ vSkill.id +');" style="font-size: 24px;">+</a>';
           strListSkills += '</div>';
           strListSkills += '<div class="card-content">';
-            strListSkills += '<p>'+ vSkill.name +'</p>';
-            strListSkills += '<p>Meu nível: '+ SKILL_LEVEL[vSkill.myLevel].Name +'</p>';
-            strListSkills += '<p>Num. Projetos: '+ vSkill.numberProjects +'</p>';
+            strListSkills += '<p>Nível:<br> '+ SKILL_LEVEL[vSkill.myLevel].Name +'</p>';
+            strListSkills += '<p>Projetos: '+ vSkill.numberProjects +'</p>';
           strListSkills += '</div>';
         strListSkills += '</div>';
       strListSkills += '</div>';

@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>SKILLS</title>
-  
+
   <!-- Add to home screen for Safari on iOS -->
   <link rel="canonical" href="https://myskills.firebaseapp.com/">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -15,64 +16,82 @@
   <meta name="msapplication-TileColor" content="#00897B">
   <link rel="apple-touch-icon" href="images/logo_152x152.png">
   <link rel="manifest" href="/manifest.json">
-  <link type="text/css" rel="stylesheet" href="styles/app.css" />
   <!-- Materialize -->
-  <link type="text/css" rel="stylesheet" href="styles/materialize-1.0.0.min.css"  media="screen,projection"/>
+  <link type="text/css" rel="stylesheet" href="styles/materialize-1.0.0.min.css" media="screen,projection" />
+  <!-- Override Css-->
+  <link type="text/css" rel="stylesheet" href="styles/app.css" />
   <!-- Firebase    -->
   <script type="text/javascript" src="scripts/firebase-app-5.4.0.min.js"></script>
   <script type="text/javascript" src="scripts/firebase-auth-5.4.0.min.js"></script>
   <script type="text/javascript" src="scripts/firebase-database-5.4.0.min.js"></script>
 </head>
-<body class="body">
-	
+
+<body class="body valign-wrapper" style="min-height: 100vh">
   <section id="frmLogin">
+    <!-- Logo -->
     <div class="col s12 center">
       <div class="center">
-      <img src="images/logo_144x144.png" style="float: left;"/><h3 class="title" style="padding-left: 5%;">SKILLS</h3>
+        <img src="images/logo_144x144.png" style="float: left;" />
+        <h3 class="title" style="padding-left: 5%;">SKILLS</h3>
       </div>
     </div>
     <br/>
+    <!-- Description heading-->
     <div class="row" style="padding-left: 8%">
+        <h6 class="text col s12" style="width: 90%;">Skills é um App que permitirá melhor eficiência na alocação em projetos do time de DDM por meio de um cadastro de níveis de conhecimento nos mais comuns frameworks.</h3>
+    </div>
+    <div class="row" style="padding-left: 8%">
+      <!-- EID Input-->
       <div class="input-field col s12" style="width: 90%;">
         <input type="text" id="txtEnterpriseID" class="validate" required>
         <label for="txtEnterpriseID" class="txtFont" style="font-size:120%">Enterprise ID:</label>
-        <span class="helper-text" style="font-size: 110%; font-family: Verdana, Geneva, sans-serif" data-error="Informe o e-mail" data-success=""></span>
+        <span class="helper-text" style="font-size: 110%; font-family: Verdana, Geneva, sans-serif" data-error="Informe o eid"
+          data-success=""></span>
       </div>
-      <div class="input-field col s12" style="width: 90%; display: inline;">
+      <!-- Password Input -->
+      <div class="input-field col s12" style="width: 90%;">
         <input type="Password" id="txtPassword" class="validate" required>
         <label for="txtPassword" class="txtFont" style="font-size:120%">Senha:</label>
-        <span class="helper-text" style="font-size: 110%; font-family: Verdana, Geneva, sans-serif" data-error="Informe a senha" data-success=""></span>
+        <span class="helper-text" style="font-size: 110%; font-family: Verdana, Geneva, sans-serif" data-error="Informe a senha"
+          data-success=""></span>
+          <!-- Forgot Password Link-->
         <a href="#" id="lnkForgotPassword" class="linkFont" style="float: right;">Esqueceu sua senha?</a>
       </div>
+      <!-- Confirm Password Input -->
       <div class="input-field col s12" id="pnlPasswordConfirm" style="width: 90%">
         <input type="Password" id="txtPasswordConfirm" class="validate" required>
         <label for="txtPasswordConfirm" class="txtFont" style="font-size:120%">Confirme a senha:</label>
-        <span class="helper-text" style="font-size: 110%; font-family: Verdana, Geneva, sans-serif" data-error="Informe a confirmação da senha" data-success=""></span>
+        <span class="helper-text" style="font-size: 110%; font-family: Verdana, Geneva, sans-serif" data-error="Informe a confirmação da senha"
+          data-success=""></span>
       </div>
     </div>
     <div class="row">
+      <!-- Login Btn -->
       <div class="col s12 center">
         <button type="button" id="btnLogin" class="btn waves-effect waves-light center" style="background-color: #232323; width: 80%; border-radius: 50px;">Acessar</button>
       </div>
+      <!-- Register Btn -->
       <div class="col s12 center">
         <button type="button" id="btnRegisterNewUser" class="btn waves-effect waves-light" style="background-color: #232323; width: 80%; border-radius: 50px">Cadastrar</button>
       </div>
-      <br><br>
+      <br>
+      <br>
+      <!-- Register Link -->
       <div class="col s12 center">
-        <a href="#" id="chkRegisterNewUser" class="linkFont">Não possui cadastro?</a>
+        <a href="#" id="chkRegisterNewUser" class="linkFont">Não possui cadastro? Clique aqui.</a>
       </div>
   </section>
 
   <section id="frmMySkills">
     <div class="navbar-fixed nav">
-      <nav style="background-color:#232323">
+      <nav class="nav">
         <div>
-          <a href="#" class="brand-logo">
+          <a href="#" class="brand-logo ">
             SKILLS
           </a>
           <ul id="nav-mobile" class="right">
             <li>
-              <a href="#" id="btnLogoff">SAIR</a>
+              <a href="#" id="btnLogoff" class="navFont">SAIR</a>
             </li>
           </ul>
         </div>
@@ -80,15 +99,15 @@
     </div>
     <br />
     <div class="row center">
-      <div id="lstMySkills" class="font">Carregando skills...</div>
+      <div id="lstMySkills" class="txtFont">Carregando skills...</div>
     </div>
   </section>
 
   <!-- Modal Message -->
   <div id="mdlMessage" class="modal">
     <div class="modal-content">
-        <h4>ATENÇÃO</h4>
-        <p id="lblMessage">Mensagem</p>
+      <h4>ATENÇÃO</h4>
+      <p id="lblMessage">Mensagem</p>
     </div>
     <div class="modal-footer">
       <a href="#" class="modal-close waves-effect waves-green btn-flat">FECHAR</a>
@@ -101,27 +120,27 @@
       <input type="hidden" id="lblSkillID" />
       <input type="hidden" id="lblSkillImage" />
       <input type="hidden" id="txtSkillMyLevel" />
-          
+
       <div class="row">
         <div class="col s10 offset-s1 center-align">
-          <h4 id="lblSkillName">Skill</h4>
+          <h4 id="lblSkillName" class="modalFont">Skill</h4>
           <h5 id="lblSkillLevelName">Level: </h5>
           <h6 id="lblSkillLevelDescription">Descrição:</h6>
         </div>
       </div>
-  
+
       <div class="row">
         <div class="col s3 center-align">
-          <a class="btn-floating btn-large waves-effect waves-light teal lighten-4" onclick="app.fnSetMySkill('0');"><i class="level-0"></i></a>
+          <a class="level-0 btn-floating btn-large waves-effect" onclick="app.fnSetMySkill('0');"></a>
         </div>
         <div class="col s3 center-align">
-          <a class="btn-floating btn-large waves-effect waves-light teal lighten-4" onclick="app.fnSetMySkill('1');"><i class="level-1"></i></a>
+          <a class="level-1 btn-floating btn-large waves-effect" onclick="app.fnSetMySkill('1');"></a>
         </div>
         <div class="col s3 center-align">
-          <a class="btn-floating btn-large waves-effect waves-light teal lighten-4" onclick="app.fnSetMySkill('2');"><i class="level-2"></i></a>
+          <a class="level-2 btn-floating btn-large waves-effect" onclick="app.fnSetMySkill('2');"/></a>
         </div>
         <div class="col s3 center-align">
-          <a class="btn-floating btn-large waves-effect waves-light teal lighten-4" onclick="app.fnSetMySkill('3');"><i class="level-3"></i></a>
+          <a class="level-3 btn-floating btn-large waves-effect" onclick="app.fnSetMySkill('3');"/></a>
         </div>
       </div>
       <div class="row">
@@ -130,22 +149,23 @@
             <div id="pgbSkillMyLevel" class="determinate"></div>
           </div>
         </div>
-      
+
         <div class="input-field col s10 offset-s1 center-align">
           <input type="number" id="txtSkillNumberProjects" class="validate right-align" required min="0" max="9999" value="0">
           <label for="txtSkillNumberProjects">Qtde de projetos realizados:</label>
           <span class="helper-text" data-error="Informe um número entre 0 e 9999." data-success=""></span>
         </div>
-      </div>  
+      </div>
     </div>
     <div class="modal-footer">
       <a href="#" id="lnkSalvarSkills" class="btn-flat waves-effect waves-green">Salvar</a>
       <a href="#" class="modal-close waves-effect waves-green btn-flat">FECHAR</a>
     </div>
   </div>
-  
+
   <script type="text/javascript" src="scripts/materialize-1.0.0.min.js"></script>
   <script type="text/javascript" src="scripts/config.js"></script>
   <script type="text/javascript" src="scripts/app.js" async></script>
 </body>
+
 </html>
