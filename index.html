@@ -28,8 +28,8 @@
   <script type="text/javascript" src="scripts/firebase-database-5.4.0.min.js"></script>
 </head>
 
-<body class="body valign-wrapper" style="min-height: 100vh">
-  <section id="frmLogin">
+<body class="body valign-wrapper">
+  <section id="frmLogin" style="margin-top: 25px;">
     <!-- Logo -->
     <div class="col s12 center">
       <div class="center">
@@ -39,19 +39,19 @@
     </div>
     <br/>
     <!-- Description heading-->
-    <div class="row" style="padding: 5%">
-      <h6 class="text col s12 descriptionFont">Skills é um app que permitirá melhor eficiência na alocação em projetos do time de DDM por meio de um cadastro de níveis
+    <div class="row" style="padding: 5%;margin-top: 0px;margin-bottom: 0px;">
+      <h6 class="text col s12 descriptionFont" style="margin-top: 0px;">Skills é um app que permitirá melhor eficiência na alocação em projetos do time de DDM por meio de um cadastro de níveis
         de conhecimento nos mais comuns frameworks.</h3>
     </div>
     <div class="row" style="padding-left: 8%">
       <!-- EID Input-->
-      <div class="input-field col s12" style="width: 90%;">
+      <div class="input-field col s12" style="width: 90%;margin-bottom: 0px;margin-top: 0px;">
         <input type="text" id="txtEnterpriseID" class="validate" required style="font-family: 'Montserrat', sans-serif">
         <label for="txtEnterpriseID" class="txtFont" style="font-size:120%">Enterprise ID:</label>
         <span class="helper-text" style="font-size: 110%; font-family: 'Montserrat', sans-serif" data-error="Informe o EID" data-success=""></span>
       </div>
       <!-- Password Input -->
-      <div class="input-field col s12" style="width: 90%;">
+      <div class="input-field col s12" style="width: 90%;margin-bottom:0px;margin-top: 25px;">
         <input type="Password" id="txtPassword" class="validate" required style="font-family: 'Montserrat', sans-serif">
         <label for="txtPassword" class="txtFont" style="font-size:120%">Senha:</label>
         <span class="helper-text" style="font-size: 110%; font-family: 'Montserrat', sans-serif" data-error="Informe a senha" data-success=""></span>
@@ -59,7 +59,7 @@
         <a href="#" id="lnkForgotPassword" class="linkFont" style="float: right;font-style: italic">Esqueceu sua senha?</a>
       </div>
       <!-- Confirm Password Input -->
-      <div class="input-field col s12" id="pnlPasswordConfirm" style="width: 90%" style="font-family: 'Montserrat', sans-serif">
+      <div class="input-field col s12" id="pnlPasswordConfirm" style="width: 90%;display: block;margin-top: 25px;margin-bottom: 0px;">
         <input type="Password" id="txtPasswordConfirm" class="validate" required style="font-family: 'Montserrat', sans-serif">
         <label for="txtPasswordConfirm" class="txtFont" style="font-size:120%">Confirme a senha:</label>
         <span class="helper-text" style="font-size: 110%; font-family: 'Montserrat', sans-serif" data-error="Informe a confirmação da senha"
@@ -72,13 +72,13 @@
         <button type="button" id="btnLogin" class="btn waves-effect waves-light center" style="background-color: #232323; width: 80%; border-radius: 50px; font-family: 'Montserrat', sans-serif">Acessar</button>
       </div>
       <!-- Register Btn -->
-      <div class="col s12 center">
-        <button type="button" id="btnRegisterNewUser" class="btn waves-effect waves-light" style="background-color: #232323; width: 80%; border-radius: 50pxstyle=; font-family: 'Montserrat', sans-serif">Cadastrar</button>
+      <div class="col s12 center" style="margin-top: 15px;">
+        <button type="button" id="btnRegisterNewUser" class="btn waves-effect waves-light" style="background-color: #232323; width: 80%; border-radius: 50px; font-family: 'Montserrat', sans-serif">Cadastrar</button>
       </div>
       <br>
       <br>
       <!-- Register Link -->
-      <div class="col s12 center">
+      <div class="col s12 center" style="margin-top: 10px;">
         <a href="#" id="chkRegisterNewUser" class="linkFont">Não possui cadastro?</a>
       </div>
   </section>
@@ -117,7 +117,7 @@
 
   <!-- Modal User Skill -->
   <div id="mdlUserSkill" class="modal modal-fixed-footer">
-    <div class="modal-content">
+    <div class="modal-content" style="padding-left: 10px;">
       <input type="hidden" id="lblSkillID" />
 
       <input type="hidden" id="lblSkillImage" />

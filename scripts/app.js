@@ -286,7 +286,7 @@ var app = {
     app.arrMySkills.forEach(function (vSkill) {
       strListSkills += '<div class="col s6 m3" onclick="app.fnShowUserSkill(' + vSkill.id + ');">';
       strListSkills += '<div class="card" style="border-radius: 3%; background-color:' + vSkill.color + '">';
-      strListSkills += '<div class="card-image">';
+      strListSkills += '<div class="card-image center">';
       strListSkills += '<img src="images/' + vSkill.image + '" alt="" style="width: 50%; height: 50%; padding-top: 15%; display: inline;">';
       //strListSkills += '<span class="card-title black-text">'+ data.val().name +'</span>';
       strListSkills += '</div>';
