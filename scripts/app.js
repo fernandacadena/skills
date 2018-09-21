@@ -5,7 +5,7 @@ var app = {
   lblMessage,
   mdlMessage,
   btnLogoff,
-  
+
   frmLogin,
   txtEnterpriseID,
   txtPassword,
@@ -21,7 +21,7 @@ var app = {
   lstMySkills,
   mdlUserSkill,
   lnkSalvarSkills,
-  
+
   objModalUserSkill: null,
   lblSkillID,
   lblSkillName,
@@ -31,9 +31,9 @@ var app = {
   lblSkillLevelName,
   lblSkillLevelDescription,
   txtSkillNumberProjects,
-  
+
   // Application Constructor
-  initialize: function() {
+  initialize: function () {
     //document.addEventListener('deviceready', this.onDeviceReady.bind(this), false);
     this.bindEvents();
     // Initialize Firebase
@@ -44,50 +44,50 @@ var app = {
     this.onLoaded();
   },
 
-  bindEvents: function() {
+  bindEvents: function () {
     //App Controlls    
     lblMessage = document.getElementById('lblMessage');
     mdlMessage = document.getElementById('mdlMessage');
-    btnLogoff  = document.getElementById('btnLogoff');
+    btnLogoff = document.getElementById('btnLogoff');
     //Controlls Login
-    frmLogin    = document.getElementById('frmLogin');
+    frmLogin = document.getElementById('frmLogin');
     txtEnterpriseID = document.getElementById('txtEnterpriseID');
     txtPassword = document.getElementById('txtPassword');
     pnlPasswordConfirm = document.getElementById('pnlPasswordConfirm');
     txtPasswordConfirm = document.getElementById('txtPasswordConfirm');
-    lnkForgotPassword  = document.getElementById('lnkForgotPassword');
-    btnLogin           = document.getElementById('btnLogin');
+    lnkForgotPassword = document.getElementById('lnkForgotPassword');
+    btnLogin = document.getElementById('btnLogin');
     chkRegisterNewUser = document.getElementById('chkRegisterNewUser');
     btnRegisterNewUser = document.getElementById('btnRegisterNewUser');
-        
+
     //Controlls Skill 
     frmMySkills = document.getElementById('frmMySkills');
     lstMySkills = document.getElementById('lstMySkills');
     mdlUserSkill = document.getElementById('mdlUserSkill');
     lnkSalvarSkills = document.getElementById('lnkSalvarSkills');
-  
+
     //Controlls Skill Modal
-    lblSkillID    = document.getElementById('lblSkillID');
-    lblSkillName  = document.getElementById('lblSkillName');
+    lblSkillID = document.getElementById('lblSkillID');
+    lblSkillName = document.getElementById('lblSkillName');
     lblSkillImage = document.getElementById('lblSkillImage');
     txtSkillMyLevel = document.getElementById('txtSkillMyLevel');
     pgbSkillMyLevel = document.getElementById('pgbSkillMyLevel');
     lblSkillLevelName = document.getElementById('lblSkillLevelName');
     lblSkillLevelDescription = document.getElementById('lblSkillLevelDescription');
     txtSkillNumberProjects = document.getElementById('txtSkillNumberProjects');
-    
+
     //Events
-    txtEnterpriseID.addEventListener("keydown", function(event) {
+    txtEnterpriseID.addEventListener("keydown", function (event) {
       if (event.key === "Enter") txtPassword.focus();
     });
-    txtPassword.addEventListener("keydown", function(event) {
-      if (event.key === "Enter") 
-        if (chkRegisterNewUser.value == "checked") 
+    txtPassword.addEventListener("keydown", function (event) {
+      if (event.key === "Enter")
+        if (chkRegisterNewUser.value == "checked")
           txtPasswordConfirm.focus();
         else
           btnLogin.focus();
     });
-    txtPasswordConfirm.addEventListener("keydown", function(event) {
+    txtPasswordConfirm.addEventListener("keydown", function (event) {
       if (event.key === "Enter") btnRegisterNewUser.focus();
     });
     lnkForgotPassword.addEventListener('click', this.fnForgotPassword, false);
@@ -95,36 +95,36 @@ var app = {
     chkRegisterNewUser.addEventListener('click', this.onCheckedRegisterNewUser, false);
     btnRegisterNewUser.addEventListener('click', this.fnRegisterNewUser, false);
     btnLogoff.addEventListener('click', this.fnLogoff, false);
-    txtSkillNumberProjects.addEventListener("keydown", function(event) {
+    txtSkillNumberProjects.addEventListener("keydown", function (event) {
       if (event.key === "Enter") lnkSalvarSkills.focus();
     });
     lnkSalvarSkills.addEventListener('click', this.fnSalvarSkills, false);
-    
+
   },
 
-  onDeviceReady: function() {
-  
+  onDeviceReady: function () {
+
   },
-  
-  onCheckedRegisterNewUser: function() {
+
+  onCheckedRegisterNewUser: function () {
     if (chkRegisterNewUser.value == "") {
       chkRegisterNewUser.innerHTML = "Voltar";
-      chkRegisterNewUser.value     = "checked";
+      chkRegisterNewUser.value = "checked";
       pnlPasswordConfirm.style.display = "block";
-      lnkForgotPassword.style.display  = "none";
-      btnLogin.style.display           = "none";
+      lnkForgotPassword.style.display = "none";
+      btnLogin.style.display = "none";
       btnRegisterNewUser.style.display = "block";
     } else {
-      chkRegisterNewUser.innerHTML = "Não possuo cadastro";
-      chkRegisterNewUser.value     = "";
+      chkRegisterNewUser.innerHTML = "Não possui cadastro?";
+      chkRegisterNewUser.value = "";
       pnlPasswordConfirm.style.display = "none";
-      lnkForgotPassword.style.display  = "block";
-      btnLogin.style.display           = "block";
+      lnkForgotPassword.style.display = "block";
+      btnLogin.style.display = "block";
       btnRegisterNewUser.style.display = "none";
     }
   },
 
-  fnClearForm: function() {
+  fnClearForm: function () {
     chkRegisterNewUser.value = "checked";
     txtEnterpriseID.value = "";
     txtPassword.value = "";
@@ -132,10 +132,10 @@ var app = {
     this.onCheckedRegisterNewUser();
   },
 
-  onLoaded: function() {
+  onLoaded: function () {
     if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.register('./service-worker.js').then(function() { 
-        
+      navigator.serviceWorker.register('./service-worker.js').then(function () {
+
       });
     }
 
@@ -143,7 +143,7 @@ var app = {
     this.onCheckedRegisterNewUser();
   },
 
-  fnShowMessage: function(vMessage) {
+  fnShowMessage: function (vMessage) {
     var objModal = M.Modal.init(mdlMessage, null);
     lblMessage.innerHTML = vMessage;
     objModal.open();
@@ -151,16 +151,16 @@ var app = {
 
   fnCheckEMail: function (vEMail) {
     var objRegExp = new RegExp(/^[A-Za-z0-9_\-\.]+@[A-Za-z0-9_\-\.]{2,}\.[A-Za-z0-9]{2,}(\.[A-Za-z0-9])?/);
-    
+
     if (objRegExp.test(vEMail)) {
-      return true; 
+      return true;
     } else {
-      return false;		
+      return false;
     }
   },
 
-  fnCheckFormIsValid: function() {
-    var strEMail    = txtEnterpriseID.value.toLowerCase();
+  fnCheckFormIsValid: function () {
+    var strEMail = txtEnterpriseID.value.toLowerCase();
     var strPassword = txtPassword.value.toLowerCase();
 
     if (app.fnCheckEMail(strEMail)) {
@@ -174,60 +174,60 @@ var app = {
     return true;
   },
 
-  onAuthStateChanged: function(user) {
+  onAuthStateChanged: function (user) {
     // Check if the user is logged
     if (user) {
-      frmLogin.style.display    = "none"; 
-      btnLogoff.style.display   = "block"; 
-      frmMySkills.style.display = "block"; 
+      frmLogin.style.display = "none";
+      btnLogoff.style.display = "block";
+      frmMySkills.style.display = "block";
       app.arrMySkills = [];
       app.fnClearForm();
       app.fnLoadSkills();
     } else {
-      frmLogin.style.display    = "block"; 
-      btnLogoff.style.display   = "none"; 
-      frmMySkills.style.display = "none"; 
+      frmLogin.style.display = "block";
+      btnLogoff.style.display = "none";
+      frmMySkills.style.display = "none";
     }
   },
 
-  fnLogin: function() {
+  fnLogin: function () {
     if (!app.fnCheckFormIsValid) {
       return;
     }
 
-    var strEMail    = txtEnterpriseID.value.toLowerCase() + "@accenture.com";
+    var strEMail = txtEnterpriseID.value.toLowerCase() + "@accenture.com";
     var strPassword = txtPassword.value.toLowerCase();
-    
+
     firebase.auth().signInWithEmailAndPassword(strEMail, strPassword)
-      .catch(function(error) {
+      .catch(function (error) {
         var errorCode = error.code;
         var errorMessage = error.message;
         app.fnShowMessage("Usuário ou senha inválido!");
       });
   },
 
-  fnLogoff: function() {
+  fnLogoff: function () {
     firebase.auth().signOut();
   },
 
-  fnForgotPassword: function() {
+  fnForgotPassword: function () {
     var strEMail = txtEnterpriseID.value.toLowerCase() + "@accenture.com";
-    
-    firebase.auth().sendPasswordResetEmail(strEMail).then(function() {
+
+    firebase.auth().sendPasswordResetEmail(strEMail).then(function () {
       app.fnShowMessage("Um link para resetar a senha foi enviado em seu e-mail!");
-    }).catch(function(error) {
+    }).catch(function (error) {
       var errorCode = error.code;
       var errorMessage = error.message;
       app.fnShowMessage("Informe um Enterprise ID cadastrado no MySkills!");
     });
   },
 
-  fnRegisterNewUser: function() {
+  fnRegisterNewUser: function () {
     if (!app.fnCheckFormIsValid) {
       return;
     }
 
-    var strEMail    = txtEnterpriseID.value.toLowerCase();
+    var strEMail = txtEnterpriseID.value.toLowerCase();
     var strPassword = txtPassword.value.toLowerCase();
     var strPasswordConfirm = txtPasswordConfirm.value.toLowerCase();
 
@@ -236,11 +236,11 @@ var app = {
       return;
     }
     strEMail += "@accenture.com";
-    
-    firebase.auth().createUserWithEmailAndPassword(strEMail, strPassword).catch(function(error) {
+
+    firebase.auth().createUserWithEmailAndPassword(strEMail, strPassword).catch(function (error) {
       var errorCode = error.code;
       var errorMessage = error.message;
-      
+
       if (errorCode == 'auth/weak-password') {
         app.fnShowMessage("Senha informada não atende aos padrões de segurança!");
       } else if (errorCode == 'auth/email-already-in-use') {
@@ -251,16 +251,16 @@ var app = {
     });
   },
 
-  fnLoadSkills: function() {
-    
+  fnLoadSkills: function () {
+
     for (var i = 0; i < SKILLS.length; i++) {
       objDatabase = firebase.database();
-      objDatabase.ref("/userskills/"+ firebase.auth().currentUser.uid + '/skills/' + SKILLS[i].id).once('value').then(
-               function(vUserSkill) {
+      objDatabase.ref("/userskills/" + firebase.auth().currentUser.uid + '/skills/' + SKILLS[i].id).once('value').then(
+        function (vUserSkill) {
           vID = vUserSkill.key - 1;
 
-          var objUserSkill = vUserSkill.val(); 
-          var objSkill = {  
+          var objUserSkill = vUserSkill.val();
+          var objSkill = {
             id: SKILLS[vID].id,
             name: SKILLS[vID].name,
             image: SKILLS[vID].image,
@@ -269,55 +269,55 @@ var app = {
             numberProjects: 0,
             updateDate: ''
           };
-          
+
           if (objUserSkill != null) {
             objSkill.myLevel = objUserSkill.myLevel;
             objSkill.numberProjects = objUserSkill.numberProjects;
-          } 
-          
+          }
+
           app.arrMySkills.push(objSkill);
           app.onRenderListSkills();
-      });
+        });
     }
   },
 
-  onRenderListSkills: function() {
+  onRenderListSkills: function () {
     var strListSkills = '';
-    app.arrMySkills.forEach(function(vSkill) {
-      strListSkills += '<div class="col s6 m3" onclick="app.fnShowUserSkill('+ vSkill.id +');">';
-        strListSkills += '<div class="card" style="border-radius: 3%; background-color:' + vSkill.color + '">';
-          strListSkills += '<div class="card-image">';
-            strListSkills += '<img src="images/'+ vSkill.image +'" alt="" style="width: 50%; height: 50%; padding-top: 15%; display: inline;">';
-            //strListSkills += '<span class="card-title black-text">'+ data.val().name +'</span>';
-          strListSkills += '</div>';
-          strListSkills += '<div class="card-content">';
-            strListSkills += '<p style="font-family:Montserrat, sans-serif"><b>Nível:</b><br> '+ SKILL_LEVEL[vSkill.myLevel].Name +'</p>';
-            strListSkills += '<p style="font-family:Montserrat, sans-serif"><b>Projetos:</b> '+ vSkill.numberProjects +'</p>';
-          strListSkills += '</div>';
-        strListSkills += '</div>';
+    app.arrMySkills.forEach(function (vSkill) {
+      strListSkills += '<div class="col s6 m3" onclick="app.fnShowUserSkill(' + vSkill.id + ');">';
+      strListSkills += '<div class="card" style="border-radius: 3%; background-color:' + vSkill.color + '">';
+      strListSkills += '<div class="card-image">';
+      strListSkills += '<img src="images/' + vSkill.image + '" alt="" style="width: 50%; height: 50%; padding-top: 15%; display: inline;">';
+      //strListSkills += '<span class="card-title black-text">'+ data.val().name +'</span>';
+      strListSkills += '</div>';
+      strListSkills += '<div class="card-content">';
+      strListSkills += '<p style="font-family:Montserrat, sans-serif"><b>Nível:</b><br> ' + SKILL_LEVEL[vSkill.myLevel].Name + '</p>';
+      strListSkills += '<p style="font-family:Montserrat, sans-serif"><b>Projetos:</b> ' + vSkill.numberProjects + '</p>';
+      strListSkills += '</div>';
+      strListSkills += '</div>';
       strListSkills += '</div>';
     });
     document.getElementById('lstMySkills').innerHTML = strListSkills;
   },
 
   intSelectSkillID: 0,
-  checkSkillID: function(vSkill) {
-      return (vSkill.id == app.intSelectSkillID);
+  checkSkillID: function (vSkill) {
+    return (vSkill.id == app.intSelectSkillID);
   },
 
-  fnSetMySkill: function(vSkillLevel) {
-    txtSkillMyLevel.value       = vSkillLevel;
+  fnSetMySkill: function (vSkillLevel) {
+    txtSkillMyLevel.value = vSkillLevel;
     lblSkillLevelName.innerHTML = SKILL_LEVEL[vSkillLevel].Name;
     pgbSkillMyLevel.style.width = SKILL_LEVEL[vSkillLevel].Percent;
     lblSkillLevelDescription.innerHTML = SKILL_LEVEL[vSkillLevel].Description;
   },
 
-  fnShowUserSkill: function(vSkillID) {
+  fnShowUserSkill: function (vSkillID) {
     app.intSelectSkillID = vSkillID;
     var objSkill = app.arrMySkills.find(app.checkSkillID);
-    
-    lblSkillID.innerHTML    = objSkill.id;
-    lblSkillName.innerHTML  = objSkill.name;
+
+    lblSkillID.innerHTML = objSkill.id;
+    lblSkillName.innerHTML = objSkill.name;
     lblSkillImage.innerHTML = objSkill.image;
     app.fnSetMySkill(objSkill.myLevel);
     txtSkillNumberProjects.value = objSkill.numberProjects;
@@ -326,29 +326,29 @@ var app = {
     app.objModalUserSkill.open();
   },
 
-  fnSalvarSkills: function() {
+  fnSalvarSkills: function () {
     var objSkill = app.arrMySkills.find(app.checkSkillID);
     if (Number(txtSkillNumberProjects.value) < 0 || Number(txtSkillNumberProjects.value) > 100) {
-      alert ("Informe a quantidade de projetos entre 0 e 100.");
-      return ;
+      alert("Informe a quantidade de projetos entre 0 e 100.");
+      return;
     }
 
     var objSkillDate = new Date();
-    objSkill.myLevel        = txtSkillMyLevel.value;
+    objSkill.myLevel = txtSkillMyLevel.value;
     objSkill.numberProjects = txtSkillNumberProjects.value;
-    objSkill.updateDate     = objSkillDate.getFullYear() + '/' + (objSkillDate.getMonth() + 1) + "/" + objSkillDate.getDate();
+    objSkill.updateDate = objSkillDate.getFullYear() + '/' + (objSkillDate.getMonth() + 1) + "/" + objSkillDate.getDate();
 
     objDatabase = firebase.database();
     var objRefUser = objDatabase.ref('/userskills/' + firebase.auth().currentUser.uid);
-    objRefUser.once('value').then(function(vUserSkill) {
+    objRefUser.once('value').then(function (vUserSkill) {
       if (vUserSkill.val() == null) {
         objRefUser.set({
           uid: firebase.auth().currentUser.uid,
           user: firebase.auth().currentUser.email
         });
       }
-      
-      var objRefUserSkill = objDatabase.ref('/userskills/' + firebase.auth().currentUser.uid + '/skills/'+ objSkill.id);
+
+      var objRefUserSkill = objDatabase.ref('/userskills/' + firebase.auth().currentUser.uid + '/skills/' + objSkill.id);
       objRefUserSkill.set({
         id: objSkill.id,
         name: objSkill.name,
@@ -356,7 +356,7 @@ var app = {
         numberProjects: objSkill.numberProjects,
         updateDate: objSkill.updateDate
       });
-      
+
       //TODO: atualizar somente o card alterado
       app.onRenderListSkills();
     });
@@ -365,6 +365,6 @@ var app = {
   }
 };
 
-window.onload = function() {
+window.onload = function () {
   app.initialize();
 }

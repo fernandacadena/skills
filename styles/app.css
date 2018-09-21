@@ -3,9 +3,10 @@
 }
 
 .titleFont {
-    font-size: 160%;
-    color: #232323; 
+    font-size: 140%;
+    color: #232323;
     font-family: 'Montserrat', sans-serif;
+    font-weight: bolder;
 }
 
 .descriptionFont {
@@ -17,7 +18,7 @@
 
 .linkFont {
     color: #232323; 
-    font-size: 120%; 
+    font-size: 110%; 
     font-family: 'Montserrat', sans-serif;
 }
 
@@ -118,8 +119,3 @@
     border-bottom: 1px solid #000 !important;
     box-shadow: 0 1px 0 0 #000 !important;
 }
-
-.flex {
-    display: flex;
-    flex-wrap: wrap;
-  }

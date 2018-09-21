@@ -28,56 +28,6 @@
   <script type="text/javascript" src="scripts/firebase-database-5.4.0.min.js"></script>
 </head>
 
-<<<<<<< HEAD
-<body class="body">
-  <div class="container">
-    <section id="frmLogin">
-      <!-- Logo -->
-      <div class="row">
-        <div class="col s12 center">
-          <div class="center">
-            <img src="images/logo_144x144.png" style="float: left;" />
-            <h3 class="title" style="padding-left: 5%;">SKILLS</h3>
-          </div>
-        </div>
-      </div>
-      <br />
-      <!-- Description heading-->
-      <div class="row">
-        <h6 class="text col s12">Skills é um App que permitirá melhor eficiência na alocação em projetos do time de DDM
-          por meio de um cadastro de níveis de conhecimento nos mais comuns frameworks.</h3>
-      </div>
-      <!-- EID Input-->
-      <div class="row flex">
-        <div class="input-field col s12">
-          <input type="text" id="txtEnterpriseID" class="validate" required>
-          <label for="txtEnterpriseID" class="txtFont" style="font-size:120%">Enterprise ID:</label>
-          <span class="helper-text" style="font-size: 110%; font-family: Verdana, Geneva, sans-serif" data-error="Informe o eid"
-            data-success=""></span>
-        </div>
-      </div>
-      <!-- Password Input -->
-      <div class="row flex">
-        <div class="input-field col s12">
-          <input type="Password" id="txtPassword" class="validate" required>
-          <label for="txtPassword" class="txtFont" style="font-size:120%">Senha:</label>
-          <span class="helper-text" style="font-size: 110%; font-family: Verdana, Geneva, sans-serif" data-error="Informe a senha"
-            data-success=""></span>
-        </div>
-      </div>
-      <!-- Forgot Password Link-->
-      <div class="row flex">
-        <a href="#" id="lnkForgotPassword" class="linkFont col s12 right-align">Esqueceu sua senha?</a>
-      </div>
-      <!-- Confirm Password Input -->
-      <div class="row flex">
-        <div class="input-field col s12" id="pnlPasswordConfirm">
-          <input type="Password" id="txtPasswordConfirm" class="validate" required>
-          <label for="txtPasswordConfirm" class="txtFont" style="font-size:120%">Confirme a senha:</label>
-          <span class="helper-text" style="font-size: 110%; font-family: Verdana, Geneva, sans-serif" data-error="Informe a confirmação da senha"
-            data-success=""></span>
-        </div>
-=======
 <body class="body valign-wrapper" style="min-height: 100vh">
   <section id="frmLogin">
     <!-- Logo -->
@@ -90,106 +40,87 @@
     <br/>
     <!-- Description heading-->
     <div class="row" style="padding: 5%">
-        <h6 class="text col s12 descriptionFont">Skills é um app que permitirá melhor eficiência na alocação em projetos do time de DDM por meio de um cadastro de níveis de conhecimento nos mais comuns frameworks.</h3>
+      <h6 class="text col s12 descriptionFont">Skills é um app que permitirá melhor eficiência na alocação em projetos do time de DDM por meio de um cadastro de níveis
+        de conhecimento nos mais comuns frameworks.</h3>
     </div>
     <div class="row" style="padding-left: 8%">
       <!-- EID Input-->
       <div class="input-field col s12" style="width: 90%;">
-        <input type="text" id="txtEnterpriseID" class="validate" required>
+        <input type="text" id="txtEnterpriseID" class="validate" required style="font-family: 'Montserrat', sans-serif">
         <label for="txtEnterpriseID" class="txtFont" style="font-size:120%">Enterprise ID:</label>
-        <span class="helper-text" style="font-size: 110%; font-family: 'Montserrat', sans-serif" data-error="Informe o eid"
-          data-success=""></span>
+        <span class="helper-text" style="font-size: 110%; font-family: 'Montserrat', sans-serif" data-error="Informe o EID" data-success=""></span>
       </div>
       <!-- Password Input -->
       <div class="input-field col s12" style="width: 90%;">
-        <input type="Password" id="txtPassword" class="validate" required>
+        <input type="Password" id="txtPassword" class="validate" required style="font-family: 'Montserrat', sans-serif">
         <label for="txtPassword" class="txtFont" style="font-size:120%">Senha:</label>
-        <span class="helper-text" style="font-size: 110%; font-family: 'Montserrat', sans-serif" data-error="Informe a senha"
-          data-success=""></span>
-          <!-- Forgot Password Link-->
-        <a href="#" id="lnkForgotPassword" class="linkFont" style="float: right;">Esqueceu sua senha?</a>
+        <span class="helper-text" style="font-size: 110%; font-family: 'Montserrat', sans-serif" data-error="Informe a senha" data-success=""></span>
+        <!-- Forgot Password Link-->
+        <a href="#" id="lnkForgotPassword" class="linkFont" style="float: right;font-style: italic">Esqueceu sua senha?</a>
       </div>
       <!-- Confirm Password Input -->
-      <div class="input-field col s12" id="pnlPasswordConfirm" style="width: 90%">
-        <input type="Password" id="txtPasswordConfirm" class="validate" required>
+      <div class="input-field col s12" id="pnlPasswordConfirm" style="width: 90%" style="font-family: 'Montserrat', sans-serif">
+        <input type="Password" id="txtPasswordConfirm" class="validate" required style="font-family: 'Montserrat', sans-serif">
         <label for="txtPasswordConfirm" class="txtFont" style="font-size:120%">Confirme a senha:</label>
         <span class="helper-text" style="font-size: 110%; font-family: 'Montserrat', sans-serif" data-error="Informe a confirmação da senha"
           data-success=""></span>
->>>>>>> 866f261bf2faefc572dae0789f4ea9b3f7a30d36
-      </div>
-      <!-- Login Btn -->
-      <div class="row flex">
-        <div class="col s12 center">
-          <button type="button" id="btnLogin" class="btn waves-effect waves-light center" style="background-color: #232323; width: 80%; border-radius: 50px;">Acessar</button>
-        </div>
-      </div>
-      <!-- Register Btn -->
-      <div class="row flex">
-        <div class="col s12 center">
-          <button type="button" id="btnRegisterNewUser" class="btn waves-effect waves-light" style="background-color: #232323; width: 80%; border-radius: 50px">Cadastrar</button>
-        </div>
-      </div>
-      <!-- Register Link -->
-      <div class="row flex">
-        <div class="col s12 center">
-          <a href="#" id="chkRegisterNewUser" class="linkFont">Não possui cadastro? Clique aqui.</a>
-        </div>
-      </div>
-    </section>
-
-    <section id="frmMySkills">
-      <div class="navbar-fixed nav">
-        <nav class="nav">
-          <div>
-            <a href="#" class="brand-logo ">
-              SKILLS
-            </a>
-            <ul id="nav-mobile" class="right">
-              <li>
-                <a href="#" id="btnLogoff" class="navFont">SAIR</a>
-              </li>
-            </ul>
-          </div>
-        </nav>
-      </div>
-      <br />
-      <div class="row center">
-        <div id="lstMySkills" class="txtFont">Carregando skills...</div>
-      </div>
-    </section>
-
-    <!-- Modal Message -->
-    <div id="mdlMessage" class="modal">
-      <div class="modal-content">
-        <h4>ATENÇÃO</h4>
-        <p id="lblMessage">Mensagem</p>
-      </div>
-      <div class="modal-footer">
-        <a href="#" class="modal-close waves-effect waves-green btn-flat">FECHAR</a>
       </div>
     </div>
+    <div class="row">
+      <!-- Login Btn -->
+      <div class="col s12 center">
+        <button type="button" id="btnLogin" class="btn waves-effect waves-light center" style="background-color: #232323; width: 80%; border-radius: 50px; font-family: 'Montserrat', sans-serif">Acessar</button>
+      </div>
+      <!-- Register Btn -->
+      <div class="col s12 center">
+        <button type="button" id="btnRegisterNewUser" class="btn waves-effect waves-light" style="background-color: #232323; width: 80%; border-radius: 50pxstyle=; font-family: 'Montserrat', sans-serif">Cadastrar</button>
+      </div>
+      <br>
+      <br>
+      <!-- Register Link -->
+      <div class="col s12 center">
+        <a href="#" id="chkRegisterNewUser" class="linkFont">Não possui cadastro?</a>
+      </div>
+  </section>
 
-<<<<<<< HEAD
-    <!-- Modal User Skill -->
-    <div id="mdlUserSkill" class="modal modal-fixed-footer">
-      <div class="modal-content">
-        <input type="hidden" id="lblSkillID" />
-        <input type="hidden" id="lblSkillImage" />
-        <input type="hidden" id="txtSkillMyLevel" />
+  <section id="frmMySkills">
+    <div class="navbar-fixed nav">
+      <nav class="nav">
+        <div>
+          <a href="#" class="brand-logo ">
+            SKILLS
+          </a>
+          <ul id="nav-mobile" class="right">
+            <li>
+              <a href="#" id="btnLogoff" class="navFont">SAIR</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+    <br />
+    <div class="row">
+      <div id="lstMySkills" class="txtFont">Carregando skills...</div>
+    </div>
+  </section>
 
-        <div class="row">
-          <div class="col s10 offset-s1 center-align">
-            <h4 id="lblSkillName" class="modalFont">Skill</h4>
-            <h5 id="lblSkillLevelName">Level: </h5>
-            <h6 id="lblSkillLevelDescription">Descrição:</h6>
-          </div>
-=======
+  <!-- Modal Message -->
+  <div id="mdlMessage" class="modal">
+    <div class="modal-content">
+      <h4>ATENÇÃO</h4>
+      <p id="lblMessage">Mensagem</p>
+    </div>
+    <div class="modal-footer">
+      <a href="#" class="modal-close waves-effect waves-green btn-flat">FECHAR</a>
+    </div>
+  </div>
+
   <!-- Modal User Skill -->
   <div id="mdlUserSkill" class="modal modal-fixed-footer">
     <div class="modal-content">
       <input type="hidden" id="lblSkillID" />
 
-      <input type="hidden" id="lblSkillImage"/>
+      <input type="hidden" id="lblSkillImage" />
       <input type="hidden" id="txtSkillMyLevel" />
 
       <div class="row">
@@ -197,47 +128,34 @@
           <h4 id="lblSkillName" class="modalTitleFont">Skill</h4>
           <h5 id="lblSkillLevelName" class="modalSkillFont" style="padding-top:10%">Level: </h5>
           <h6 id="lblSkillLevelDescription" class="modalDescriptionFont">Descrição:</h6>
->>>>>>> 866f261bf2faefc572dae0789f4ea9b3f7a30d36
-        </div>
-
-        <div class="row">
-          <div class="col s3 center-align">
-            <a class="level-0 btn-floating btn-large waves-effect" onclick="app.fnSetMySkill('0');"></a>
-          </div>
-          <div class="col s3 center-align">
-            <a class="level-1 btn-floating btn-large waves-effect" onclick="app.fnSetMySkill('1');"></a>
-          </div>
-          <div class="col s3 center-align">
-            <a class="level-2 btn-floating btn-large waves-effect" onclick="app.fnSetMySkill('2');" /></a>
-          </div>
-          <div class="col s3 center-align">
-            <a class="level-3 btn-floating btn-large waves-effect" onclick="app.fnSetMySkill('3');" /></a>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col s10 offset-s1 center-align">
-            <div class="progress">
-              <div id="pgbSkillMyLevel" class="determinate"></div>
-            </div>
-          </div>
-
-<<<<<<< HEAD
-          <div class="input-field col s10 offset-s1 center-align">
-            <input type="number" id="txtSkillNumberProjects" class="validate right-align" required min="0" max="9999"
-              value="0">
-            <label for="txtSkillNumberProjects">Qtde de projetos realizados:</label>
-            <span class="helper-text" data-error="Informe um número entre 0 e 9999." data-success=""></span>
-          </div>
         </div>
       </div>
-      <div class="modal-footer">
-        <a href="#" id="lnkSalvarSkills" class="btn-flat waves-effect waves-green">Salvar</a>
-        <a href="#" class="modal-close waves-effect waves-green btn-flat">FECHAR</a>
+
+      <div class="row">
+        <div class="col s3 center-align">
+          <a class="level-0 btn-floating btn-large waves-effect" onclick="app.fnSetMySkill('0');"></a>
+        </div>
+        <div class="col s3 center-align">
+          <a class="level-1 btn-floating btn-large waves-effect" onclick="app.fnSetMySkill('1');"></a>
+        </div>
+        <div class="col s3 center-align">
+          <a class="level-2 btn-floating btn-large waves-effect" onclick="app.fnSetMySkill('2');" /></a>
+        </div>
+        <div class="col s3 center-align">
+          <a class="level-3 btn-floating btn-large waves-effect" onclick="app.fnSetMySkill('3');" /></a>
+        </div>
       </div>
-=======
+      <div class="row">
+        <div class="col s10 offset-s1 center-align">
+          <div class="progress">
+            <div id="pgbSkillMyLevel" class="determinate"></div>
+          </div>
+        </div>
+
         <div class="input-field col s10 offset-s1 center-align" style="padding-top:-10;margin-top: 0px;margin-bottom: 0px;">
-            <h6 for="txtSkillNumberProjects" class="modalDescriptionFont" style="text-align: center">Quantidade de projetos realizados:</h6>
-          <input type="number" id="txtSkillNumberProjects" class="validate center-align" required min="0" max="100" value="0" style="height: 30px;">
+          <h6 for="txtSkillNumberProjects" class="modalDescriptionFont" style="text-align: center">Quantidade de projetos realizados:</h6>
+          <input type="number" id="txtSkillNumberProjects" class="validate center-align" style="font-family: 'Montserrat', sans-serif"
+            required min="0" max="100" value="0" style="height: 30px;">
           <span class="helper-text" data-error="Informar a quantidade" data-success="" style="font-size: 95%; font-family: 'Montserrat', sans-serif"></span>
         </div>
       </div>
@@ -245,10 +163,8 @@
     <div class="modal-footer">
       <a href="#" id="lnkSalvarSkills" class="btn-flat waves-effect waves-green">Salvar</a>
       <a href="#" class="modal-close waves-effect waves-green btn-flat">Fechar</a>
->>>>>>> 866f261bf2faefc572dae0789f4ea9b3f7a30d36
     </div>
   </div>
-
 
   <script type="text/javascript" src="scripts/materialize-1.0.0.min.js"></script>
   <script type="text/javascript" src="scripts/config.js"></script>
