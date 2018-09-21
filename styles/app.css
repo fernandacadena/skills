@@ -2,16 +2,29 @@
     background-color:#FF9D1D;
 }
 
+.titleFont {
+    font-size: 160%;
+    color: #232323; 
+    font-family: 'Montserrat', sans-serif;
+}
+
+.descriptionFont {
+    width: 90%;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 105%;
+    text-align: center;
+}
+
 .linkFont {
     color: #232323; 
     font-size: 120%; 
-    font-family: Verdana, Geneva, sans-serif
+    font-family: 'Montserrat', sans-serif;
 }
 
 .txtFont {
     color: #232323; 
 	font-size: 130%; 
-	font-family: Verdana, Geneva, sans-serif
+	font-family: 'Montserrat', sans-serif;
 }
 
 .nav {
@@ -20,27 +33,36 @@
 
 .navFont {
     color: #ffffff;
-    font-family: Verdana, Geneva, sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-size: 90%;
     text-transform: uppercase;
 }
 
-.modalFont {
+.modalTitleFont {
     color: #232323;
-    font-family: Verdana, Geneva, sans-serif;
-    font-size: 120%
+    font-family: 'Montserrat', sans-serif;
+    font-size: 120%;
+    text-transform: uppercase;
+    font-weight: bold
+}
+
+.modalSkillFont {
+    color: #232323;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 110%;
+    font-weight: bold
+}
+
+.modalDescriptionFont {
+    color: #232323;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 110%;
 }
 
 .center {
     display: flex;
     align-items: center;
     justify-content: center;
-}
-
-.title {
-    font-size: 220%;
-    color: #232323; 
-    font-family: Impact, Charcoal, sans-serif
 }
 
 .levels {

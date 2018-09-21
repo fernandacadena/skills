@@ -7,10 +7,10 @@ var CONFIG_FIREBASE = {
   messagingSenderId: "49269432084"
 };
 
-var SKILL_LEVEL = [{ id: 0, Name: "Fraudinha", Percent: '0%', Description: "Não possuo conhecimento." },
-{ id: 1, Name: "Estudante", Percent: '33%', Description: "Em fase de estudos." },
-{ id: 2, Name: "Nerd", Percent: '66%', Description: "Utilizo no dia a dia." },
-{ id: 3, Name: "Jedi", Percent: '100%', Description: "Possuo conhecimento aprofundado." }];
+var SKILL_LEVEL = [{ id: 0, Name: "Fraldinha", Percent: '0%', Description: "Nunca ouvi falar" },
+{ id: 1, Name: "Padawan", Percent: '33%', Description: "Familiar, consigo discutir sobre o assunto" },
+{ id: 2, Name: "Cavaleiro", Percent: '66%', Description: "Capaz, já fiz entregas sozinho" },
+{ id: 3, Name: "Jedi", Percent: '100%', Description: "Expert, consigo capacitar outras pessoas" }];
 
 var SKILLS = [{ id: 1, name: 'Android', image: 'ic_android.png', color: '#00948C' },
 { id: 2, name: 'iOS', image: 'ic_ios.png', color: '#99D765' },
