@@ -130,6 +130,15 @@ var app = {
     txtPassword.value = "";
     txtPasswordConfirm.value = "";
     this.onCheckedRegisterNewUser();
+
+    //Reset form labels
+    M.updateTextFields();
+
+    //Remove valid state from class
+    txtEnterpriseID.classList.remove("valid");
+    txtPassword.classList.remove("valid");
+    txtPasswordConfirm.classList.remove("valid");
+
   },
 
   onLoaded: function () {
