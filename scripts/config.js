@@ -1,10 +1,10 @@
 var CONFIG_FIREBASE = {
-  apiKey: "AIzaSyBiROmBhfBvr_DCBHcP91syK4QOGkR5Z4w",
-  authDomain: "myskills-96ac2.firebaseapp.com",
-  databaseURL: "https://myskills-96ac2.firebaseio.com",
-  projectId: "myskills-96ac2",
-  storageBucket: "myskills-96ac2.appspot.com",
-  messagingSenderId: "49269432084"
+  apiKey: "AIzaSyCbnOobqUzRp3SbgluUFnkT86W8PnR5RjE",
+  authDomain: "myskills-877a3.firebaseapp.com",
+  databaseURL: "https://myskills-877a3.firebaseio.com",
+  projectId: "myskills-877a3",
+  storageBucket: "myskills-877a3.appspot.com",
+  messagingSenderId: "165554456071"
 };
 
 var SKILL_LEVEL = [{ id: 0, Name: "Charmander", Percent: '0%', Description: "Nunca ouvi falar" },

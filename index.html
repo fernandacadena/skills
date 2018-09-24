@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html class="html">
 
 <head>
   <meta charset="utf-8">
@@ -29,95 +29,109 @@
 </head>
 
 <body class="body valign-wrapper">
-  <section id="frmLogin" style="margin-top: 25px;">
+  <section id="frmLogin" class="frm-login">
     <!-- Logo -->
     <div class="col s12 center">
       <div class="center">
-        <img src="images/logo_144x144.png" style="float: left;" />
-        <h3 class="titleFont" style="padding-left: 5%;">SKILLS</h3>
+        <img src="images/logo_144x144.png" class="logo" />
+        <h3 class="font-title">SKILLS</h3>
       </div>
     </div>
     <br/>
     <!-- Description heading-->
-    <div class="row" style="padding: 5%;margin-top: 0px;margin-bottom: 0px;">
-      <h6 class="text col s12 descriptionFont" style="margin-top: 0px;">Skills é um app que permitirá melhor eficiência na alocação em projetos do time de DDM por meio de um cadastro de níveis
+    <div class="row div-description">
+      <h6 class="text col s12 description-font">Skills é um app que permitirá melhor eficiência na alocação em projetos do time de DDM por meio de um cadastro de níveis
         de conhecimento nos mais comuns frameworks.</h3>
     </div>
-    <div class="row" style="padding-left: 8%">
+    <div class="row div-login">
       <!-- EID Input-->
-      <div class="input-field col s12" style="width: 90%;margin-bottom: 0px;margin-top: 0px;">
-        <input type="text" id="txtEnterpriseID" class="validate" required style="font-family: 'Montserrat', sans-serif">
-        <label for="txtEnterpriseID" class="txtFont" style="font-size:120%">Enterprise ID:</label>
-        <span class="helper-text" style="font-size: 110%; font-family: 'Montserrat', sans-serif" data-error="Informe o EID" data-success=""></span>
+      <div class="input-field col s12 div-eid">
+        <input type="text" id="txtEnterpriseID" class="validate input-font" required>
+        <label for="txtEnterpriseID" class="input-font">Enterprise ID:</label>
+        <span class="helper-text span-font" data-error="Informe o EID" data-success=""></span>
       </div>
       <!-- Password Input -->
-      <div class="input-field col s12" style="width: 90%;margin-bottom:0px;margin-top: 25px;">
-        <input type="Password" id="txtPassword" class="validate" required style="font-family: 'Montserrat', sans-serif">
-        <label for="txtPassword" class="txtFont" style="font-size:120%">Senha:</label>
-        <span class="helper-text" style="font-size: 110%; font-family: 'Montserrat', sans-serif" data-error="Informe a senha" data-success=""></span>
+      <div class="input-field col s12 div-password">
+        <input type="Password" id="txtPassword" class="validate input-font" required>
+        <label for="txtPassword" class="input-font">Senha:</label>
+        <span class="helper-text span-font" data-error="Informe a senha" data-success=""></span>
         <!-- Forgot Password Link-->
-        <a href="#" id="lnkForgotPassword" class="linkFont" style="float: right;font-style: italic">Esqueceu sua senha?</a>
+        <a href="#" id="lnkForgotPassword" class="link-forgot-password link-font">Esqueceu sua senha?</a>
       </div>
       <!-- Confirm Password Input -->
       <div class="input-field col s12" id="pnlPasswordConfirm" style="width: 90%;display: block;margin-top: 25px;margin-bottom: 0px;">
         <input type="Password" id="txtPasswordConfirm" class="validate" required style="font-family: 'Montserrat', sans-serif">
-        <label for="txtPasswordConfirm" class="txtFont" style="font-size:120%">Confirme a senha:</label>
-        <span class="helper-text" style="font-size: 110%; font-family: 'Montserrat', sans-serif" data-error="Informe a confirmação da senha"
-          data-success=""></span>
+        <label for="txtPasswordConfirm" class="input-font">Confirme a senha:</label>
+        <span class="helper-text span-font" data-error="Informe a confirmação da senha" data-success=""></span>
       </div>
     </div>
     <div class="row">
       <!-- Login Btn -->
       <div class="col s12 center">
-        <button type="button" id="btnLogin" class="btn waves-effect waves-light center" style="background-color: #232323; width: 80%; border-radius: 50px; font-family: 'Montserrat', sans-serif">Acessar</button>
+        <button type="button" id="btnLogin" class="btn waves-effect waves-light btn-login">Acessar</button>
       </div>
       <!-- Register Btn -->
       <div class="col s12 center" style="margin-top: 15px;">
-        <button type="button" id="btnRegisterNewUser" class="btn waves-effect waves-light" style="background-color: #232323; width: 80%; border-radius: 50px; font-family: 'Montserrat', sans-serif">Cadastrar</button>
+        <button type="button" id="btnRegisterNewUser" class="btn waves-effect waves-light btn-login">Cadastrar</button>
       </div>
       <br>
       <br>
       <!-- Register Link -->
       <div class="col s12 center" style="margin-top: 10px;">
-        <a href="#" id="chkRegisterNewUser" class="linkFont">Não possui cadastro?</a>
+        <a href="#" id="chkRegisterNewUser" class="link-font">Não possui cadastro?</a>
       </div>
   </section>
 
-  <section id="frmMySkills">
+  <section id="frmMySkills" class="frm-skills">
     <div class="navbar-fixed nav">
       <nav class="nav">
         <div>
-          <a href="#" class="brand-logo ">
+          <a href="#" class="brand-logo nav-font">
             SKILLS
           </a>
           <ul id="nav-mobile" class="right">
             <li>
-              <a href="#" id="btnLogoff" class="navFont">SAIR</a>
+              <a href="#" id="btnLogoff" class="nav-font">SAIR</a>
             </li>
           </ul>
         </div>
       </nav>
     </div>
     <br />
-    <div class="row">
-      <div id="lstMySkills" class="txtFont">Carregando skills...</div>
+    <div class="row div-skills">
+      <div id="lstMySkills" class="skill-font"></div>
+      <!-- <div class="div-skills loading">
+        <div class="preloader-wrapper small active">
+          <div class="spinner-layer spinner-green-only">
+            <div class="circle-clipper left">
+              <div class="circle"></div>
+            </div>
+            <div class="gap-patch">
+              <div class="circle"></div>
+            </div>
+            <div class="circle-clipper right">
+              <div class="circle"></div>
+            </div>
+          </div>
+        </div>
+      </div> -->
     </div>
   </section>
 
   <!-- Modal Message -->
-  <div id="mdlMessage" class="modal">
-    <div class="modal-content">
-      <h4>ATENÇÃO</h4>
-      <p id="lblMessage">Mensagem</p>
+  <div id="mdlMessage" class="modal modal-center">
+    <div class="modal-content modal-alert">
+      <h4 class="modal-title-font center">ATENÇÃO</h4>
+      <p id="lblMessage" class="modal-font modal-alert-description">Mensagem</p>
     </div>
-    <div class="modal-footer">
-      <a href="#" class="modal-close waves-effect waves-green btn-flat">FECHAR</a>
+    <div class="modal-footer modal-footer">
+      <a href="#" class="modal-close waves-effect waves-green btn-flat modal-font">FECHAR</a>
     </div>
   </div>
 
   <!-- Modal User Skill -->
   <div id="mdlUserSkill" class="modal modal-fixed-footer">
-    <div class="modal-content" style="padding-left: 10px;">
+    <div class="modal-content modal-user-skill">
       <input type="hidden" id="lblSkillID" />
 
       <input type="hidden" id="lblSkillImage" />
@@ -125,9 +139,9 @@
 
       <div class="row">
         <div class="col s10 offset-s1 center-align">
-          <h4 id="lblSkillName" class="modalTitleFont">Skill</h4>
-          <h5 id="lblSkillLevelName" class="modalSkillFont" style="padding-top:10%">Level: </h5>
-          <h6 id="lblSkillLevelDescription" class="modalDescriptionFont">Descrição:</h6>
+          <h4 id="lblSkillName" class="modal-title-font">Skill</h4>
+          <h5 id="lblSkillLevelName" class="modal-skill-font">Level: </h5>
+          <h6 id="lblSkillLevelDescription" class="modal-font">Descrição:</h6>
         </div>
       </div>
 
@@ -152,17 +166,17 @@
           </div>
         </div>
 
-        <div class="input-field col s10 offset-s1 center-align" style="padding-top:-10;margin-top: 0px;margin-bottom: 0px;">
-          <h6 for="txtSkillNumberProjects" class="modalDescriptionFont" style="text-align: center">Quantidade de projetos realizados:</h6>
-          <input type="number" id="txtSkillNumberProjects" class="validate center-align" style="font-family: 'Montserrat', sans-serif"
-            required min="0" max="100" value="0" style="height: 30px;">
-          <span class="helper-text" data-error="Informar a quantidade" data-success="" style="font-size: 95%; font-family: 'Montserrat', sans-serif"></span>
+        <div class="input-field col s10 offset-s1 center-align input-projects">
+          <h6 for="txtSkillNumberProjects" class="modal-font projects">Quantidade de projetos realizados:</h6>
+          <input type="number" id="txtSkillNumberProjects" class="validate center-align modal-font projects-input"
+            required min="0" max="100" value="0">
+          <span class="helper-text span-font projects" data-error="Informar a quantidade" data-success=""></span>
         </div>
       </div>
     </div>
     <div class="modal-footer">
-      <a href="#" id="lnkSalvarSkills" class="btn-flat waves-effect waves-green">Salvar</a>
-      <a href="#" class="modal-close waves-effect waves-green btn-flat">Fechar</a>
+      <a href="#" id="lnkSalvarSkills" class="btn-flat waves-effect waves-green modal-footer-font">Salvar</a>
+      <a href="#" class="modal-close waves-effect waves-green btn-flat modal-footer-font">Fechar</a>
     </div>
   </div>
 
