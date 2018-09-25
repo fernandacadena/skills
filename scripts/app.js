@@ -300,7 +300,7 @@ var app = {
       //strListSkills += '<span class="card-title black-text">'+ data.val().name +'</span>';
       strListSkills += '</div>';
       strListSkills += '<div class="card-content">';
-      strListSkills += '<p style="font-family:Montserrat, sans-serif"><b>Nível:</b><br> ' + SKILL_LEVEL[vSkill.myLevel].Name + '</p>';
+      strListSkills += '<p style="font-family:Montserrat, sans-serif"><b>Nível:</b><br> ' + SKILL_LEVEL[vSkill.myLevel].Name + '<br></p>';
       strListSkills += '<p style="font-family:Montserrat, sans-serif"><b>Projetos:</b> ' + vSkill.numberProjects + '</p>';
       strListSkills += '</div>';
       strListSkills += '</div>';

@@ -8,7 +8,7 @@ var CONFIG_FIREBASE = {
 };
 
 var SKILL_LEVEL = [{ id: 0, Name: "Charmander", Percent: '0%', Description: "Nunca ouvi falar" },
-{ id: 1, Name: "Charmaleon", Percent: '33%', Description: "Familiar, consigo discutir sobre o assunto" },
+{ id: 1, Name: "Charmeleon", Percent: '33%', Description: "Familiar, consigo discutir sobre o assunto" },
 { id: 2, Name: "Charizard", Percent: '66%', Description: "Capaz, já fiz entregas sozinho" },
 { id: 3, Name: "Mega Charizard", Percent: '100%', Description: "Expert, consigo capacitar outras pessoas" }];
 
